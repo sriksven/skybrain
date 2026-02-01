@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback, useMemo } from 'react';
+import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { fetchAPI } from '@/lib/api';
 import { useUnits } from '@/context/UnitContext';
@@ -202,6 +203,13 @@ export default function Home() {
             >
               {unitSystem === 'metric' ? 'METRIC' : 'IMPERIAL'}
             </button>
+
+            <Link
+              href="/how-to-use"
+              className="bg-slate-800 border border-slate-600 px-3 py-1 rounded text-xs font-bold hover:bg-slate-700 transition-colors text-slate-300"
+            >
+              HOW TO USE
+            </Link>
 
             <div className="text-right">
               <div className="text-xs text-slate-500 uppercase mb-1">Update in</div>

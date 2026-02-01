@@ -6,13 +6,13 @@
 
 **Real-Time Flight Intelligence Powered by AI**
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://sriksven.github.io/flightmind-ai/)
-[![API Status](https://img.shields.io/badge/API-online-success)](https://flightmind-api.fly.dev/health)
+[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://sriksven.github.io/skybrain/)
+[![API Status](https://img.shields.io/badge/API-online-success)](https://skybrain-api.fly.dev/health)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Next.js 14](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 
-[Live Demo](https://sriksven.github.io/flightmind-ai/) · [API Docs](docs/API.md) · [Report Bug](https://github.com/sriksven/flightmind-ai/issues) · [Request Feature](https://github.com/sriksven/flightmind-ai/issues)
+[Live Demo](https://sriksven.github.io/skybrain/) · [API Docs](docs/API.md) · [Report Bug](https://github.com/sriksven/skybrain/issues) · [Request Feature](https://github.com/sriksven/skybrain/issues)
 
 </div>
 
@@ -20,9 +20,9 @@
 
 ## Overview
 
-**FlightMind AI** is an intelligent aviation assistant that transforms raw flight data, airport status, and weather information into clear, actionable travel insights using Large Language Models (LLMs).
+**Skybrain** is an intelligent aviation assistant that transforms raw flight data, airport status, and weather information into clear, actionable travel insights using Large Language Models (LLMs).
 
-Built entirely with **free and open-data APIs**, FlightMind demonstrates how modern AI can make complex real-time data accessible to everyone.
+Built entirely with **free and open-data APIs**, Skybrain demonstrates how modern AI can make complex real-time data accessible to everyone.
 
 ### Key Features
 
@@ -41,7 +41,7 @@ Built entirely with **free and open-data APIs**, FlightMind demonstrates how mod
 Travelers see flight delays but rarely understand **why** they're happening. Flight, airport, and weather data exist in technical formats across multiple sources, making it difficult to get clear answers.
 
 ### Our Solution
-FlightMind aggregates multiple free aviation data sources, structures the information, and uses LLM reasoning to generate human-friendly explanations in seconds.
+Skybrain aggregates multiple free aviation data sources, structures the information, and uses LLM reasoning to generate human-friendly explanations in seconds.
 
 ---
 
@@ -107,8 +107,8 @@ FlightMind aggregates multiple free aviation data sources, structures the inform
 ### Backend Setup
 ```bash
 # Clone repository
-git clone https://github.com/sriksven/flightmind-ai.git
-cd flightmind-ai/backend
+git clone https://github.com/sriksven/skybrain.git
+cd skybrain/backend
 
 # Create virtual environment
 python -m venv venv
@@ -153,7 +153,7 @@ Frontend will be available at `http://localhost:3000`
 ```
 You: Why are flights delayed at JFK?
 
-FlightMind: Flights at JFK are experiencing moderate delays 
+Skybrain: Flights at JFK are experiencing moderate delays 
 averaging 35 minutes due to strong crosswinds (gusting to 
 40 mph) and heavy arrival traffic. The FAA has implemented 
 a ground delay program to manage the congestion.
