@@ -61,7 +61,8 @@ class OpenSkyService:
                             geo_altitude=s[13],
                             squawk=s[14],
                             spi=s[15],
-                            position_source=s[16]
+                            position_source=s[16],
+                            category=s[17] if len(s) > 17 else 0
                         )
                         states.append(flight)
                 
@@ -99,3 +100,6 @@ class OpenSkyService:
             except Exception as e:
                 print(f"Error fetching airport {mode}s: {e}")
                 return []
+
+# Singleton instance
+opensky_service = OpenSkyService()

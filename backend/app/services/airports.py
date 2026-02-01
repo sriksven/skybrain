@@ -22,6 +22,7 @@ class AirportService:
         "ZSPD": {"name": "Shanghai Pudong International Airport", "lat": 31.1443, "lon": 121.8083, "city": "Shanghai", "country": "China"},
         "ZBAA": {"name": "Beijing Capital International Airport", "lat": 40.0799, "lon": 116.6031, "city": "Beijing", "country": "China"},
         "VHHH": {"name": "Hong Kong International Airport", "lat": 22.3080, "lon": 113.9185, "city": "Hong Kong", "country": "China"},
+        "KBOS": {"name": "Boston Logan International Airport", "lat": 42.3656, "lon": -71.0096, "city": "Boston", "country": "USA"},
     }
 
     def get_airport(self, code: str) -> Optional[Dict]:
@@ -45,3 +46,36 @@ class AirportService:
                 nearest = {**data, "code": code}
                 
         return nearest
+
+    def search_by_term(self, term: str) -> Optional[Dict]:
+        """
+        Search for an airport by ICAO code, Name, City, or Country.
+        Prioritizes exact ICAO match, then fuzzy name match.
+        """
+        term = term.strip().upper()
+        
+        # 1. Try Direct ICAO Match
+        if term in self._airports:
+            return {**self._airports[term], "code": term}
+            
+        # 2. Search values (City, Name, Country)
+        for code, data in self._airports.items():
+            # Check City (case-insensitive)
+            if term == data["city"].upper():
+                return {**data, "code": code}
+            # Check partial City
+            if term in data["city"].upper():
+                return {**data, "code": code}
+            # Check partial Name
+            if term in data["name"].upper():
+                return {**data, "code": code}
+                
+        return None
+
+    def get_sorted_list(self) -> list:
+        """Return list of airports sorted by City."""
+        lst = []
+        for code, data in self._airports.items():
+            lst.append({**data, "code": code})
+        # Sort by City, then Name
+        return sorted(lst, key=lambda x: (x["city"], x["name"]))

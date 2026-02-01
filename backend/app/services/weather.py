@@ -18,8 +18,9 @@ class WeatherService:
             "latitude": airport["lat"],
             "longitude": airport["lon"],
             "current": ["temperature_2m", "relative_humidity_2m", "is_day", "precipitation", "rain", "showers", "snowfall", "weather_code", "wind_speed_10m", "wind_direction_10m"],
-            "temperature_unit": "fahrenheit",
-            "wind_speed_unit": "mph",
+            "current": ["temperature_2m", "relative_humidity_2m", "is_day", "precipitation", "rain", "showers", "snowfall", "weather_code", "wind_speed_10m", "wind_direction_10m"],
+            "temperature_unit": "celsius",
+            "wind_speed_unit": "kmh",
             "precipitation_unit": "inch"
         }
         

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import { UnitProvider } from "@/context/UnitContext";
+import { WatchlistProvider } from "@/context/WatchlistContext";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -30,7 +31,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <UnitProvider>
-          {children}
+          <WatchlistProvider>
+            {children}
+          </WatchlistProvider>
         </UnitProvider>
       </body>
     </html>

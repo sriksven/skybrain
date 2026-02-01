@@ -19,6 +19,7 @@ class FlightState(BaseModel):
     squawk: Optional[str] = None
     spi: bool
     position_source: int
+    category: int = 0
 
 class AircraftResponse(BaseModel):
     time: int
