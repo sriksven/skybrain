@@ -21,6 +21,8 @@ app.add_middleware(
 async def health_check():
     return {"status": "healthy", "version": "1.0.0"}
 
-from app.api import flights, weather
+from app.api import flights, weather, faa, airports
 app.include_router(flights.router)
 app.include_router(weather.router)
+app.include_router(faa.router)
+app.include_router(airports.router)

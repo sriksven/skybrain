@@ -1,5 +1,5 @@
 import httpx
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 from app.models.schemas import FlightState
 import time
 import json
@@ -69,4 +69,33 @@ class OpenSkyService:
                 return states
             except Exception as e:
                 print(f"Error fetching OpenSky data: {e}")
+                return []
+
+    async def get_airport_flights(self, airport_code: str, mode: str) -> List[Dict[str, Any]]:
+        """
+        Fetch arrivals or departures for an airport.
+        mode: 'arrival' or 'departure'
+        """
+        # OpenSky requires time window (begin, end). 
+        # We'll ask for the last 2 hours to get recent activity.
+        end_time = int(time.time())
+        begin_time = end_time - 7200 # 2 hours ago
+        
+        endpoint = "arrival" if mode == "arrival" else "departure"
+        
+        async with httpx.AsyncClient() as client:
+            try:
+                params = {
+                   "airport": airport_code,
+                   "begin": begin_time,
+                   "end": end_time
+                }
+                response = await client.get(f"{self.BASE_URL}/flights/{endpoint}", params=params)
+                if response.status_code == 404:
+                    return [] # No data found
+                response.raise_for_status()
+                return response.json()
+                
+            except Exception as e:
+                print(f"Error fetching airport {mode}s: {e}")
                 return []

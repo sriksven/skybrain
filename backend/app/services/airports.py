@@ -1,4 +1,5 @@
 from typing import Optional, Dict
+import math
 
 class AirportService:
     # Static list of major airports to start with (can be expanded or replaced with DB later)
@@ -26,3 +27,21 @@ class AirportService:
     def get_airport(self, code: str) -> Optional[Dict]:
         """Look up airport by ICAO code (case-insensitive)."""
         return self._airports.get(code.upper())
+    
+    def find_nearest(self, lat: float, lon: float) -> Optional[Dict]:
+        """Find the nearest airport to the given coordinates."""
+        nearest = None
+        min_dist = float('inf')
+        
+        for code, data in self._airports.items():
+            # Simple Euclidean distance is sufficient for finding nearest static airport
+            # Dist = sqrt( (lat2-lat1)^2 + (lon2-lon1)^2 )
+            d_lat = data["lat"] - lat
+            d_lon = data["lon"] - lon
+            dist_sq = d_lat*d_lat + d_lon*d_lon
+            
+            if dist_sq < min_dist:
+                min_dist = dist_sq
+                nearest = {**data, "code": code}
+                
+        return nearest
