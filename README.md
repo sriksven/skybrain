@@ -1,8 +1,8 @@
-# ✈️ skybrain
+# Skybrain
 
 <div align="center">
 
-![skybrain Logo](docs/images/logo.png)
+![Skybrain Logo](docs/images/logo.png)
 
 **Real-Time Flight Intelligence Powered by AI**
 
@@ -18,24 +18,24 @@
 
 ---
 
-## 🌟 Overview
+## Overview
 
 **FlightMind AI** is an intelligent aviation assistant that transforms raw flight data, airport status, and weather information into clear, actionable travel insights using Large Language Models (LLMs).
 
 Built entirely with **free and open-data APIs**, FlightMind demonstrates how modern AI can make complex real-time data accessible to everyone.
 
-### ✨ Key Features
+### Key Features
 
-🤖 **AI-Powered Explanations** - Natural language responses to flight delay questions  
-🛫 **Real-Time Airport Status** - Live delays, ground stops, and operational updates  
-🌦️ **Weather Intelligence** - Integrated weather impacts on flight operations  
-✈️ **Traffic Analysis** - Aircraft density and congestion insights  
-📊 **Smart Comparisons** - Side-by-side airport condition analysis  
-💬 **Conversational Interface** - Chat naturally about travel situations
+*   **AI-Powered Explanations** - Natural language responses to flight delay questions
+*   **Real-Time Airport Status** - Live delays, ground stops, and operational updates
+*   **Weather Intelligence** - Integrated weather impacts on flight operations
+*   **Traffic Analysis** - Aircraft density and congestion insights
+*   **Smart Comparisons** - Side-by-side airport condition analysis
+*   **Conversational Interface** - Chat naturally about travel situations
 
 ---
 
-## 🎯 Problem & Solution
+## Problem & Solution
 
 ### The Problem
 Travelers see flight delays but rarely understand **why** they're happening. Flight, airport, and weather data exist in technical formats across multiple sources, making it difficult to get clear answers.
@@ -45,7 +45,7 @@ FlightMind aggregates multiple free aviation data sources, structures the inform
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 ```
 ┌─────────────────────┐
 │   Next.js Frontend  │
@@ -85,24 +85,24 @@ FlightMind aggregates multiple free aviation data sources, structures the inform
 
 ---
 
-## 🔌 Data Sources (100% Free)
+## Data Sources (100% Free)
 
 | Purpose | Source | Status | Data |
 |---------|--------|--------|------|
-| 🛩️ Aircraft Tracking | [OpenSky Network](https://opensky-network.org/) | ✅ Free & Open | Position, altitude, velocity |
-| 🛫 Airport Status | [FAA API](https://nasstatus.faa.gov/) | ✅ Free (US Gov) | Ground stops, delays |
-| 🌦️ Weather | [Open-Meteo](https://open-meteo.com/) | ✅ No API Key | Wind, visibility, conditions |
-| 🏢 Airport Data | [OurAirports](https://ourairports.com/data/) | ✅ Open Dataset | Codes, coordinates |
-| 🗺️ Geocoding | [Nominatim](https://nominatim.org/) | ✅ Free w/ Policy | Location lookup |
+| Aircraft Tracking | [OpenSky Network](https://opensky-network.org/) | Free & Open | Position, altitude, velocity |
+| Airport Status | [FAA API](https://nasstatus.faa.gov/) | Free (US Gov) | Ground stops, delays |
+| Weather | [Open-Meteo](https://open-meteo.com/) | No API Key | Wind, visibility, conditions |
+| Airport Data | [OurAirports](https://ourairports.com/data/) | Open Dataset | Codes, coordinates |
+| Geocoding | [Nominatim](https://nominatim.org/) | Free w/ Policy | Location lookup |
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
-- **Python 3.8+**
-- **Node.js 18+**
-- **OpenAI API Key** (or Anthropic Claude)
+- Python 3.8+
+- Node.js 18+
+- OpenAI API Key (or Anthropic Claude)
 
 ### Backend Setup
 ```bash
@@ -125,7 +125,7 @@ cp .env.example .env
 uvicorn app.main:app --reload
 ```
 
-Backend will be available at `http://localhost:8000`  
+Backend will be available at `http://localhost:8000`
 API docs at `http://localhost:8000/docs`
 
 ### Frontend Setup
@@ -147,7 +147,7 @@ Frontend will be available at `http://localhost:3000`
 
 ---
 
-## 💬 Usage Examples
+## Usage Examples
 
 ### Chat Interface
 ```
@@ -175,7 +175,7 @@ curl -X POST "http://localhost:8000/api/compare" \
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **Framework:** Next.js 14 with TypeScript
@@ -197,21 +197,21 @@ curl -X POST "http://localhost:8000/api/compare" \
 
 ---
 
-## 📊 Project Highlights
+## Project Highlights
 
 Perfect for demonstrating on your resume:
 
-✅ **Full-Stack AI System** - End-to-end LLM application development  
-✅ **Multi-API Integration** - Orchestrated 6 real-time data sources  
-✅ **Production Deployment** - Live system serving real users  
-✅ **Clean Architecture** - Modular, testable, maintainable code  
-✅ **Modern Stack** - Latest frameworks and best practices  
-✅ **Performance** - <2s response time for complex queries  
-✅ **Documentation** - Comprehensive guides and API docs
+*   **Full-Stack AI System** - End-to-end LLM application development
+*   **Multi-API Integration** - Orchestrated 6 real-time data sources
+*   **Production Deployment** - Live system serving real users
+*   **Clean Architecture** - Modular, testable, maintainable code
+*   **Modern Stack** - Latest frameworks and best practices
+*   **Performance** - <2s response time for complex queries
+*   **Documentation** - Comprehensive guides and API docs
 
 ---
 
-## 🛣️ Roadmap
+## Roadmap
 
 - [x] Core MVP with basic status queries
 - [x] LLM-powered explanations
@@ -224,7 +224,7 @@ Perfect for demonstrating on your resume:
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Chat Interface
 ![Chat Interface](docs/images/chat-screenshot.png)
@@ -234,7 +234,7 @@ Perfect for demonstrating on your resume:
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please see [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
 
@@ -246,7 +246,7 @@ Contributions are welcome! Please see [CONTRIBUTING.md](docs/CONTRIBUTING.md) fo
 
 ---
 
-## 🧪 Testing
+## Testing
 ```bash
 # Backend tests
 cd backend
@@ -259,33 +259,33 @@ npm test
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🔒 Compliance & Privacy
+## Compliance & Privacy
 
-✅ **No Personal Data** - Zero passenger information collected  
-✅ **Public APIs Only** - No proprietary or restricted data  
-✅ **Privacy-First** - No user tracking beyond basic analytics  
-✅ **Safe for Portfolio** - Fully compliant with all data policies  
+*   **No Personal Data** - Zero passenger information collected
+*   **Public APIs Only** - No proprietary or restricted data
+*   **Privacy-First** - No user tracking beyond basic analytics
+*   **Safe for Portfolio** - Fully compliant with all data policies
 
 ---
 
-## 👤 Author
+## Author
 
 **Krishna Venkatesh**
 
-- 🌐 Portfolio: [ClickCraft](https://your-portfolio.com)
-- 💼 LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
-- 🐙 GitHub: [@sriksven](https://github.com/sriksven)
-- 📧 Email: your.email@example.com
+- Portfolio: [ClickCraft](https://your-portfolio.com)
+- LinkedIn: [linkedin.com/in/yourprofile](https://linkedin.com/in/yourprofile)
+- GitHub: [@sriksven](https://github.com/sriksven)
+- Email: your.email@example.com
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [OpenSky Network](https://opensky-network.org/) for aircraft tracking data
 - [FAA](https://www.faa.gov/) for airport status information
@@ -295,7 +295,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 📚 Documentation
+## Documentation
 
 - [API Documentation](docs/API.md)
 - [Setup Guide](docs/SETUP.md)
@@ -304,7 +304,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-## 💡 Inspiration
+## Inspiration
 
 This project demonstrates how modern AI can democratize access to complex real-time data. By combining multiple free data sources with LLM reasoning, we can create powerful tools that help millions of travelers understand their flight situations.
 
@@ -314,6 +314,6 @@ This project demonstrates how modern AI can democratize access to complex real-t
 
 **Built with ❤️ using only free and open-source tools**
 
-[⬆ Back to Top](#-flightmind-ai)
+[⬆ Back to Top](#skybrain)
 
 </div>
