@@ -2,7 +2,7 @@
 
 <div align="center">
 
-![Skybrain Logo](docs/images/logo.png)
+![Skybrain Dashboard](docs/images/header.png)
 
 **Real-Time Flight Intelligence Powered by AI**
 
