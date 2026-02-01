@@ -396,7 +396,7 @@ export default function Home() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Callsign (e.g. UAL123) or ICAO24..."
+              placeholder="Search Flight (e.g., UAL123)..."
               className="bg-slate-950 border border-slate-700 rounded px-4 py-2 text-white w-full focus:border-blue-500 outline-none"
             />
           </div>
@@ -458,14 +458,14 @@ export default function Home() {
                     <thead className="bg-slate-950 text-slate-400 uppercase tracking-wider text-xs sticky top-0">
                       <tr>
                         <th className="p-4 w-10"></th>
-                        <th className="p-4 w-12 text-center">Type</th>
+                        <th className="p-4 w-12 text-center">Icon</th>
                         <th className="p-4 w-16">Airline</th>
                         <th className="p-4">Flight</th>
                         <th className="p-4">Country</th>
                         <th className="p-4 group relative cursor-help">
-                          <span className="border-b border-dashed border-slate-600">Squawk</span>
+                          <span className="border-b border-dashed border-slate-600">Signal Code</span>
                           <div className="hidden group-hover:block absolute bottom-full left-0 w-48 p-2 bg-slate-800 border border-slate-600 text-xs text-slate-300 rounded shadow-xl z-10 mb-2">
-                            Transponder code. <br /> 7700 = Emergency
+                            Transponder Signal (Squawk). <br /> 7700 = Emergency
                           </div>
                         </th>
                         <th className="p-4 text-right">Altitude</th>

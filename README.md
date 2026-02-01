@@ -6,13 +6,13 @@
 
 **Real-Time Flight Intelligence Powered by AI**
 
-[![Live Demo](https://img.shields.io/badge/demo-live-success)](https://sriksven.github.io/skybrain/)
+
 [![API Status](https://img.shields.io/badge/API-online-success)](https://skybrain-api.fly.dev/health)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![Next.js 14](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
 
-[Live Demo](https://sriksven.github.io/skybrain/) · [API Docs](docs/API.md) · [Report Bug](https://github.com/sriksven/skybrain/issues) · [Request Feature](https://github.com/sriksven/skybrain/issues)
+[API Docs](docs/API.md) · [Report Bug](https://github.com/sriksven/skybrain/issues) · [Request Feature](https://github.com/sriksven/skybrain/issues)
 
 </div>
 
